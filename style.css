@@ -120,6 +120,8 @@ button.btn.btn-card:active {
     background-color: var(--O3344F);
 }
 
+.advantage {position: relative;}
+
 .advantage h5 {
     display: inline-block;
     margin-bottom: 0.375rem;
@@ -132,7 +134,7 @@ button.btn.btn-card:active {
     font-size: 16px; line-height: 1.25;
 }
 
-.advantage:nth-child(1) {
+.advantage:nth-child(1)::before {
     background: url('/img/Delivery.svg') no-repeat;
 }
 
