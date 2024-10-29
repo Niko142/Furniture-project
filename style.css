@@ -80,6 +80,8 @@ ul.navbar-nav {
     column-gap: 54px;
 }
 
+article.card {max-width: 643px;}
+
 .card {background-color: var(--DFE9F4);}
 
 .card.position-absolute {
@@ -137,4 +139,113 @@ button.btn.btn-card:active {
 .advantage:nth-child(1)::before {
     background: url('/img/Delivery.svg') no-repeat;
 }
+
+@media screen and (max-width: 1150px) {
+    article.card {
+        transform: scale(0.9);
+    }
+
+    .card.position-absolute {
+        top: 12%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    article.card {
+      /* max-width: 500px; */
+      transform: scale(0.8);
+    }
+    .card-body {
+      padding: 15px 20px;
+    }
+
+    .card.position-absolute {
+        top: 0%; right: 0%;
+    }
+
+  }
+
+  /* Адаптивные стили для планшетов и маленьких экранов */
+  @media screen and (max-width: 868px) {
+    article.card {
+      /* max-width: 400px; */
+      transform: scale(0.7);
+    }
+    .card-body {
+      padding: 10px 15px;
+    }
+  }
+
+  @media screen and (max-width: 778px) {
+    article.card {
+        transform: scale(0.6);
+    }
+    
+    .card.position-absolute {
+        top: -8%; right: -8%;
+    }
+
+  }
+
+  @media screen and (max-width: 670px) {
+
+    article.card {
+        transform: scale(0.5);
+    }
+
+    .card.position-absolute {
+        top: -22%; right: -17%;
+    }
+
+  }
+
+  /* Адаптивные стили для мобильных экранов */
+  @media (max-width: 576px) {
+
+    span.navbar-brand {font-size: 28px;}
+
+    article.card {
+      /* max-width: 300px; */
+      transform: scale(0.45);
+    }
+
+    .card.position-absolute {
+        top: -29%; right: -23%;
+    }
+
+  }
+
+  @media screen and (max-width: 520px) {
+
+    .navbar.navbar-expand-lg {
+        padding-inline: 85px;
+    }
+
+    article.card {
+        transform: scale(0.4);
+        width: 700px;
+    }
+
+    .card.position-absolute {
+        top: -43%; right: -30%;
+    }
+  }
+
+  @media screen and  (max-width: 440px) {
+
+    .navbar.navbar-expand-lg {padding-inline: 15px;}
+
+    article.card {transform: scale(0.35);}
+    .card.position-absolute {top: -57%; right: -46%;}
+  }
+
+  @media screen and  (max-width: 375px) {
+
+
+    .card.position-absolute {top: -65%; right: -49%;}
+  }
+
+  @media screen and  (max-width: 344px) {
+    .card.position-absolute {top: -73%; right: -55%;}
+  }
 
