@@ -17,7 +17,7 @@
 
 }
 
-
+/* Стиль для текста */
 @font-face {
     font-family: "Montserrat";
     src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
@@ -56,6 +56,8 @@ body {
     margin: 0 auto;
 }
 
+
+/* навигационная панель */
 .navbar.navbar-expand-lg {
     padding: 43px 0 38px 0;
     padding-inline: 120px;
@@ -79,6 +81,8 @@ nav {background-color: var(--white);}
 ul.navbar-nav {
     column-gap: 54px;
 }
+
+/* контент с карточкой */
 
 article.card {max-width: 643px;}
 
@@ -122,6 +126,8 @@ button.btn.btn-card:active {
     background-color: var(--O3344F);
 }
 
+/* достоинства компании */
+
 .advantage {position: relative;}
 
 .advantage h5 {
@@ -136,8 +142,35 @@ button.btn.btn-card:active {
     font-size: 16px; line-height: 1.25;
 }
 
+.advantage .row {
+    background-color: var(--F2F5FF); 
+    padding: 46px 100px 49px 120px;
+}
+
+.advantage.col.p-0.max:nth-child(2) {
+    max-width: 314px;
+}
+
+.advantage.col.p-0.max:nth-child(3) {
+    max-width: 320px;
+}
+
 .advantage:nth-child(1)::before {
     background: url('/img/Delivery.svg') no-repeat;
+}
+
+/* photos */
+
+.d-flex.flex-wrap.justify-content-center > img:nth-child(2) {
+    transform: translateY(-38px);
+}
+
+/* медиа-запросы */
+
+@media screen and (max-width: 1399px) {
+    .d-flex.flex-wrap.justify-content-center > img:nth-child(2) {
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -149,6 +182,10 @@ button.btn.btn-card:active {
         top: 12%;
     }
 }
+
+/* @media screen and (max-width: 1075px) {
+    
+} */
 
 @media screen and (max-width: 992px) {
     article.card {
@@ -189,6 +226,10 @@ button.btn.btn-card:active {
 
   @media screen and (max-width: 670px) {
 
+    .row.m-auto {
+        padding-left: 80px;
+    }
+
     article.card {
         transform: scale(0.5);
     }
@@ -216,6 +257,10 @@ button.btn.btn-card:active {
   }
 
   @media screen and (max-width: 520px) {
+
+    .row.m-auto {
+        padding-inline: 40px;
+    }
 
     .navbar.navbar-expand-lg {
         padding-inline: 85px;
