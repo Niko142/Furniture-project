@@ -1,5 +1,6 @@
 const advantageElement = document.querySelectorAll('.advantage.col.p-0');
 const lastClild = document.querySelector('.advantage.col.p-0:last-child');
+const card = document.querySelector('.position-relative');
 
 function clearMaxWidth() {
     return advantageElement.forEach(elem => elem.classList.remove('max'))
@@ -10,6 +11,7 @@ function addMaxWidth() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
     function handleResize() {
         let width = document.documentElement.clientWidth;
         (width <= 1075) ? clearMaxWidth() : addMaxWidth();

@@ -167,6 +167,24 @@ button.btn.btn-card:active {
 
 /* медиа-запросы */
 
+/* how it works */
+
+/* footer */
+
+input[type='text'] {
+    box-sizing: border-box;
+    max-height: 70px; max-width: 333px;
+    padding: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+input[type='text'],
+.btn.btn-primary  {
+    border-radius: 3px;
+}
+
 @media screen and (max-width: 1399px) {
     .d-flex.flex-wrap.justify-content-center > img:nth-child(2) {
         transform: translateY(0);
