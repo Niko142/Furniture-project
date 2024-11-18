@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: "./src/furniture.js",
@@ -25,28 +26,50 @@ module.exports = {
         port: 9000,
         hot: true
     },
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000,
+    },
     module: {
         rules: [
-            // {
-            //     test: /\.css$/i,
-            //     use: [MiniCssExtractPlugin.loader, 'css-loader']
-            // },
             {
-                test: /\.scss$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                test: /\.s[ac]ss$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader', 
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: () => [
+                                    autoprefixer
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                quietDeps: true, // Отключает предупреждения от зависимостей
+                            },
+                        }
+                    }
+                ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name].svg'
+                    filename: 'images/[name][ext]'
                 },
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'fonts/[name].woff2'
+                    filename: 'fonts/[name][ext]'
                 },
             },
         ],

@@ -1,19 +1,204 @@
-// @use 'bootstrap/scss/bootstrap';
+// @use "/node_modules/bootstrap/scss/bootstrap.scss";
+@use "/node_modules/bootstrap/scss/bootstrap";
+@use './normalize';
 
-@use './normalize.scss';
-
-/* colors */
+// colors
 $white: #FFFFFF;
 $black: #000000;
 $FCFCFC: #FCFCFC;
 $F2F5FF: #F2F5FF;
 $O11C42: #011C42;
 $O3344F: #03344F;
-$O54C73: #054C73;
+$primary-color: #054C73;
 $O9513B: #09513B;
 $D7D6D6: #D7D6D6;
 $DFE9F4: #DFE9F4;
 
+// font-face
+$font-family: 'Montserrat';
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
 /* personal colors */
 $dark-grey: #333333;
 $light-grey: #666666;
+
+
+@font-face {
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+    font: {
+        family: $font-family;
+        weight: $bold;
+        style: normal;
+        display: swap;
+    }
+}
+
+@font-face {
+    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+    font: {
+        family: $font-family;
+        weight: $semi-bold;
+        style: normal;
+        display: swap;
+    }
+}
+
+@font-face {
+    src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+    font: {
+        family: $font-family;
+        weight: $medium;
+        style: normal;
+        display: swap;
+    }
+}
+
+@font-face {
+    src: url("../fonts/Montserrat-Regular.ttf") format("woff");
+    font: {
+        family: $font-family;
+        weight: $regular;
+        style: normal;
+        display: swap;
+    }
+}
+
+body {
+    font-family: $font-family, sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding: {
+        inline: 120px;
+        top: 43px;
+        bottom: 38px;
+    };
+    background-color: $white;
+
+    &-brand {
+        font: {
+            weight: $bold;
+            size: 34px;
+        }
+        line-height: 1.2058823529411764705882352941176;
+        padding: 0;
+        color: $primary-color;
+    }
+
+    &-nav {
+        column-gap: 54px;
+
+        & .nav-item {
+            & .nav-link {
+                color: $dark-grey;
+                font: {
+                    weight: $semi-bold;
+                    size: 14px;
+                }
+            }
+        }
+    }
+
+}
+
+// cards
+
+.card {
+    position: relative;
+
+    &_article {
+        position: absolute;
+        border: 0 {
+            radius: 10px;
+        };
+        background-color: $DFE9F4;
+        max-width: 643px;
+        top: 20.5%; right: 6.3%;
+    }
+
+    &-body {
+        padding: {
+            top: 37px;
+            right: 45px;
+            bottom: 41px;
+            left: 39px;
+        };
+        color: $dark-grey;
+
+            & span.card-title {
+                display: inline-block;
+                margin-bottom: 20px;
+                font: {
+                    weight: $semi-bold;
+                    size: 16px;
+                };
+                line-height: 1.25;
+                letter-spacing: 3px;
+            }
+            
+            & h5.card-title {
+                color: $primary-color;
+                font: {
+                    size: 52px;
+                    weight: $bold;
+                };
+                line-height: 1.2211538461538461538461538461538;;
+            }
+
+            & .card-text {
+                font: {
+                    size: 18px;
+                    weight: $medium;
+                };
+                line-height: 2.1666666666666666666666666666667;
+                margin-bottom: 30px;
+            }
+            
+    }
+
+    & .btn-card {
+        color: $white;
+        background-color: $primary-color;
+        font: {
+            size: 16px;
+            weight: $bold;
+        };
+        line-height: 1.25;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 25px 72px;
+
+        &:hover,
+        &:active,
+        &:focus-visible {
+            color: $white;
+            background-color: $O3344F;
+        }
+    }
+}
+
+.advantage {
+    background-color: $F2F5FF;
+    
+    &_row {
+        justify-content: space-between;
+        padding: {
+            top: 46px;
+            right: 100px;
+            left: 120px;
+            bottom: 49px;
+        };
+        // column-gap: 124px; 
+        // row-gap: 60px;
+    }
+    &_item {
+        display: flex;
+        align-items: center;
+    }
+}
+
