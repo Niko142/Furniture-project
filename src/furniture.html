@@ -42,11 +42,11 @@
     <!-- card -->
 
     <div class="card">
-        <img src="./images/Palm.png" class="card_img img-fluid" alt="...">
+        <img src="./images/Palm.png" class="card_img img-fluid" style="height: 749px;" alt="...">
         <article class="card_article">
             <div class="card-body">
                 <span class="card-title">New Arrival</span>
-                <h5 class="card-title" style="margin-bottom: 20px; max-width: 420px;">Discover Our New Collection</h5>
+                <h5 class="card-title">Discover Our New Collection</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
                 <button class="btn btn-card border-0">Buy now</button>
             </div>
@@ -57,25 +57,25 @@
 
     <div class="advantage container-fluid gx-0">
         <div class="advantage_row row m-auto">
-            <div class="advantage_item col p-0">
-                    <img src="./images/Delivery.svg" class="advantage_image advantage-delivery" style="margin-right: 27px;" height="50" alt="Delivery">
+            <div class="advantage_item advantage_item_delivery  col-lg-6 col-xl-4 p-0">
+                    <img src="./images/Delivery.svg" class="advantage_image advantage_image_delivery" alt="Delivery">
                     <div class="advantage_description">
-                        <h5>Free Delivery</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        <h5 class="advantage_description_header">Free Delivery</h5>
+                        <p class="advantage_description_text mb-0">Lorem ipsum dolor sit amet.</p>
                     </div>
             </div>
-            <div class="advantage_item col p-0">
-                    <img src="./images/Support.svg" class="advantage_image advantage-support" style="margin-right: 27px;" height="49" alt="Support">
+            <div class="advantage_item advantage_item_support col-lg-6 col-xl-4 p-0">
+                    <img src="./images/Support.svg" class="advantage_image advantage_image_support" alt="Support">
                     <div class="advantage_description">
-                        <h5>Support 24/7</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        <h5 class="advantage_description_header">Support 24/7</h5>
+                        <p class="advantage_description_text mb-0">Lorem ipsum dolor sit amet.</p>
                     </div>
             </div>
-            <div class="advantage_item col p-0">
-                    <img src="./images/Shield.svg" class="advantage_image advantage-shield" style="margin-right: 32px;" height="55" alt="Shield">
+            <div class="advantage_item advantage_item_shield col col-xl-4 p-0">
+                    <img src="./images/Shield.svg" class="advantage_image advantage_image_shield" alt="Shield">
                     <div class="advantage_description">
-                        <h5>100% Authentic</h5>
-                        <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        <h5 class="advantage_description_header">100% Authentic</h5>
+                        <p class="advantage_description_text mb-0">Lorem ipsum dolor sit amet.</p>
                     </div>
             </div>
         </div>
@@ -83,103 +83,114 @@
 
     <!-- collection -->
 
-    <div class="container" style="margin-top: 60px;">
-        <h2 class="text-center fw-bold" style="font-size: 32px; line-height: 1.21875; margin-bottom: 20px;">Inspiration Collection</h2>
-        <p class="text-center" style="font-size: 20px; line-height: 1.5; margin-bottom: 88px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="d-flex flex-wrap justify-content-center" style="margin-bottom: 60px; column-gap: 40px; row-gap: 20px;">
-            <img src="./images/Clock.svg" height="434" alt="Clock">
-            <img src="./images/Pedestal.png" height="434" alt="Pedestal">
-            <img src="./images/Lamp.png" height="434" alt="Lamp">
+    <div class="collection container-fluid gx-0">
+        <h2 class="collection_header text-center">Inspiration Collection</h2>
+        <p class="collection_text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="collection_image_container">
+            <img src="./images/Clock.svg" class="collection_img img-fluid" alt="Clock">
+            <img src="./images/Pedestal.png" class="collection_img collection_img_raised img-fluid" alt="Pedestal">
+            <img src="./images/Lamp.png" class="collection_img img-fluid" alt="Lamp">
         </div>
     </div>
 
     <!-- learn more -->
 
-    <div class="learn position-relative" style="margin-bottom: 60px; background-color: var(--F2F5FF);">
-        <div class="card-body d-inline-block">
-            <h2 class="card-title" style="font-weight: 700; font-size: 32px; line-height: 1.21875; margin-bottom: 20px;">Beautify Your Space</h1>
-            <div class="card-text" style="font-weight: 400; font-size: 20px; line-height: 1.95; max-width: 500px; margin-bottom: 30px;">
+    <div class="learn position-relative d-flex">
+        <div class="learn-body d-inline-block">
+            <h2 class="learn-title">Beautify Your Space</h1>
+            <div class="learn-text">
                 Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </div>
             <button class="btn btn-card border-0" style="padding: 24px 57px;">Learn more</button>
         </div>
-        <div class="d-inline-block">
-            <img src="./images/Girl.svg" class="img-fluid position-relative" alt="Girl">
+        <div class="learn-container d-inline-block position-relative">
+            <img src="./images/Girl.svg" class="learn-container_img img-fluid" alt="Girl">
         </div>
     </div>
     
     <!-- Range -->
 
-    <div class="container" style="margin-bottom: 60px;">
-        <h2 class="text-center fw-bold" style="font-size: 32px; line-height: 1.21875; margin-bottom: 20px;">Browse The Range</h2>
-        <p class="text-center" style="font-size: 20px; line-height: 1.5; margin-bottom: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="range container">
+        <h2 class="range_header text-center">Browse The Range</h2>
+        <p class="range_description text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="row">
-            <figure class="figure d-flex justify-content-center" style="gap: 20px;">
+            <figure class="range_figures figure d-flex justify-content-center mb-0" style="gap: 20px;">
                 <div>
                     <img src="./images/Dining.svg" class="figure-img img-fluid rounded mb-0" alt="...">
-                    <figcaption class="figure-caption text-center" style="margin-top: 30px; color: var(--dark-grey); font-weight: 600; font-size: 24px; line-height: 1.2;">Dining</figcaption>
+                    <figcaption class="range_caption figure-caption text-center">Dining</figcaption>
                 </div>
                 <div>
                     <img src="./images/Living.png" class="figure-img img-fluid rounded mb-0" alt="...">
-                    <figcaption class="figure-caption text-center" style="margin-top: 30px; color: var(--dark-grey); font-weight: 600; font-size: 24px; line-height: 1.2;">Living</figcaption>
+                    <figcaption class="range_caption figure-caption text-center">Living</figcaption>
                 </div>
                 <div>
                     <img src="./images/Bedroom.svg" class="figure-img img-fluid rounded mb-0" alt="...">
-                    <figcaption class="figure-caption text-center" style="margin-top: 30px; color: var(--dark-grey); font-weight: 600; font-size: 24px; line-height: 1.2;">Bedroom</figcaption>
+                    <figcaption class="range_caption figure-caption text-center">Bedroom</figcaption>
                 </div>
             </figure>
         </div>
     </div>
     <hr style="margin-bottom: 60px;">
-    <!--  -->
-    <div class="container" style="margin-bottom: 197px;">
-        <h2 class="text-center fw-bold" style="font-size: 32px; line-height: 1.21875; margin-bottom: 20px;">How It Works</h2>
-        <p class="text-center" style="font-size: 20px; line-height: 1.5; margin-bottom: 50px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <!-- work -->
+    
+    <div class="work container">
+        <h2 class="work_header text-center">How It Works</h2>
+        <p class="work_description text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="row">
-            <figure class="figure d-flex justify-content-center mb-0 px-0" style="gap: 20px;">
+            <figure class="work_figures figure d-flex justify-content-center mb-0 px-0" style="gap: 20px;">
                 <div>
-                    <img src="./images/BlackMan.png" class="figure-img img-fluid rounded mb-0" alt="...">
-                    <figcaption class="figure-caption text-center" style="margin-top: 30px; color: var(--dark-grey); font-weight: 700; font-size: 24px; line-height: 1.2; max-width: 381px;">Purchase Securely <br>
-                        <span style="font-weight: 400; font-size: 18px; line-height: 1.55;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <div class="work_figures_container work_figures_container_first">
+                        <img src="./images/BlackMan.png" class="figure-img img-fluid rounded mb-0" alt="...">
+                    </div>
+                    <figcaption class="work_caption figure-caption text-center">Purchase Securely <br>
+                        <span class="work_span">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </figcaption>
                 </div>
                 <div>
-                    <img src="./images/Warehouse.png" class="figure-img img-fluid rounded mb-0" alt="...">
-                    <figcaption class="figure-caption text-center" style="margin-top: 30px; color: var(--dark-grey); font-weight: 700; font-size: 24px; line-height: 1.2; max-width: 381px;">Ships From Warehouse <br>
-                        <span style="font-weight: 400; font-size: 18px; line-height: 1.55;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <div class="work_figures_container work_figures_container_middle">
+                        <img src="./images/Warehouse.png" class="figure-img img-fluid rounded mb-0" alt="...">
+                    </div>
+                    <figcaption class="work_caption figure-caption text-center">Ships From Warehouse <br>
+                        <span class="work_span">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </figcaption>
                 </div>
                 <div>
-                    <img src="./images/Room.png" class="figure-img img-fluid rounded mb-0" alt="...">
-                    <figcaption class="figure-caption text-center" style="margin-top: 30px; color: var(--dark-grey); font-weight: 700; font-size: 24px; line-height: 1.2; max-width: 381px;">Style Your Room <br>
-                        <span style="font-weight: 400; font-size: 18px; line-height: 1.55;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <div class="work_figures_container work_figures_container_last">
+                        <img src="./images/Room.png" class="figure-img img-fluid rounded mb-0" alt="...">
+                    </div>
+                    <figcaption class="work_caption figure-caption text-center">Style Your Room <br>
+                        <span class="work_span">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                     </figcaption>
                 </div>
             </figure>
         </div>
     </div>
+    
     <!-- footer -->
-     <footer>
-        <div class="border border-black" style="background-color: var(--F2F5FF); padding: 64px 0 60px 0;">
-            <h2 class="text-center fw-bold" style="font-size: 32px; line-height: 1.3125; margin-bottom: 10px;">Join Our Mailing List</h2>
-            <p class="text-center" style="font-size: 20px; line-height: 1.5; margin-bottom: 50px;">Sign up to receive inspiration, product updates, and special offers from our team.</p>
-            <div class="form d-flex justify-content-center">
-                <input type="text" class="form-control" placeholder="example@gmail.com"><button type="submit" class="btn btn-primary">Submit</button>
+
+     <footer class="footer">
+        <div class="footer_submit_form border border-black">
+            <h2 class="footer_submit_form_header text-center">Join Our Mailing List</h2>
+            <p class="footer_submit_form_text text-center">Sign up to receive inspiration, product updates, and special offers from our team.</p>
+            <div class="footer_submit_form_container d-flex justify-content-center">
+                <input type="text" class="footer_submit_form_input form-control" placeholder="example@gmail.com"><button type="submit" class="btn btn-card btn-footer">Submit</button>
             </div>
         </div>
-        <div class="footer" style="color: var(--white); background-color: var(--O3344F);">
-            <div class="description d-inline-block" style="vertical-align: top;">
-                <h3 style="font-weight: 700; font-size: 24px; line-height: 1.2083; margin-bottom: 34px;">Beauty Care</h3>
-                <p style="font-weight: 400; font-size: 16px; line-height: 2.1875; max-width: 389px; margin-bottom: 21px;">Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                <a href="http://instagram.com/" style="font-weight: 700; font-size: 24px; line-height: 1.2083; text-decoration: none; color: var(--white);">Follow us</a>
+        <div class="footer_network">
+            <div class="footer_network_description d-inline-block">
+                <h3 class="footer_network_header">Beauty Care</h3>
+                <p class="footer_network_text">Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <a href="http://instagram.com/" class="footer_network_follow" aria-label="Follow on social network" style="font-weight: 700; font-size: 24px; line-height: 1.2083; text-decoration: none; color: var(--white);">Follow us</a>
             </div>
-            <div class="network d-inline-block position-relative">
-                <h3 style="font-weight: 700; font-size: 24px; line-height: 1.2083; margin-bottom: 23px;">Instagram Shop</h3>
-                <div class="images" style="gap: 21px;">
-                    <img src="./images/toy.svg" class="img-fluid" alt="...">
-                    <img src="./images/bed.svg" class="img-fluid"  alt="...">
-                    <img src="./images/towel.svg" class="img-fluid" alt="...">
-                    <img src="./images/kitchen.svg" class="img-fluid" alt="...">
+            <!-- убрать невидимый пробел -->
+            <div class="d-inline-block position-relative">
+                <h3 class="footer_network_header shop">Instagram Shop</h3>
+                <div class="container-fluid d-flex p-0" style="gap: 23px; flex-wrap: wrap;">
+                    <img src="./images/toy.svg" class="img-fluid footer_img" alt="...">
+                    <img src="./images/bed.svg" class="img-fluid footer_img" alt="...">
+                    <img src="./images/towel.svg" class="img-fluid footer_img" alt="...">
+                    <img src="./images/kitchen.svg" class="img-fluid footer_img" alt="...">
                 </div>
             </div>
         </div>
