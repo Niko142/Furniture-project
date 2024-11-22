@@ -1,3 +1,33 @@
+@mixin footers ($size) {
+  @media screen and (width <= $size) {
+    @content
+  }
+};
+
+@mixin work-number ($size) {
+  @media screen and (width <= $size) {
+    @content
+  }
+};
+
+@mixin tablet () {
+  @media screen and (width <= 768px) {
+    @content
+  }
+};
+
+@mixin mobileL () {
+  @media screen and (width <= 425px) {
+    @content
+  }
+}
+
+@mixin mobileM () {
+  @media screen and (width <= 375px) {
+    @content
+  }
+}
+
 /**
   Нормализация блочной модели
  */

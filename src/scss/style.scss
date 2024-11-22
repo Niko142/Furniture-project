@@ -1,7 +1,5 @@
-// @use "/node_modules/bootstrap/scss/bootstrap.scss";
 @use "/node_modules/bootstrap/scss/bootstrap";
 @use './normalize';
-
 // colors
 $white: #FFFFFF;
 $black: #000000;
@@ -31,9 +29,7 @@ $work-height: 445px;
 $dark-grey: #333333;
 $light-grey: #666666;
 
-// расширение
-
-// Для чередования в блоке work
+//расширение для описания псевдоселектора в блоке work
 %work-after {
     content: '';
     text-align: center;
@@ -51,6 +47,7 @@ $light-grey: #666666;
     width: 90px; height: 90px;
 }
 
+//Стили шрифтов 
 @font-face {
     src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
     font: {
@@ -114,6 +111,13 @@ body {
     };
     background-color: $white;
 
+    @media screen and (width <= 675px) {
+        padding-inline: 60px;
+    }
+    @media screen and (width <= 425px) {
+        padding: 30px;
+    }
+
     &-brand {
         font: {
             weight: $bold;
@@ -122,12 +126,17 @@ body {
         line-height: 1.2058823529411764705882352941176;
         padding: 0;
         color: $primary-color;
+        cursor: pointer;
     }
 
     &-nav {
         column-gap: 54px;
 
         & .nav-item {
+            transition: transform .4s ease-in-out;
+            &:hover {
+                transform: scale(1.5);
+            }
             & .nav-link {
                 color: $dark-grey;
                 font: {
@@ -144,6 +153,7 @@ body {
 
 .card {
     position: relative;
+    max-height: 749px;
 
     &_article {
         position: absolute;
@@ -151,8 +161,9 @@ body {
             radius: 10px;
         };
         background-color: $DFE9F4;
-        max-width: 643px;
         top: 20.5%; right: 6.3%;
+
+        @media screen and (width <= 1172px) {top: 9.5%}
     }
 
     &-body {
@@ -162,6 +173,8 @@ body {
             bottom: 41px;
             left: 39px;
         };
+        // относительное позиционирование вокруг данного значения
+        font-size: 20px;
         color: $dark-grey;
 
             & span.card-title {
@@ -169,7 +182,7 @@ body {
                 margin-bottom: 20px;
                 font: {
                     weight: $semi-bold;
-                    size: 1rem;
+                    size: 0.8em;
                 };
                 line-height: 1.25;
                 letter-spacing: 3px;
@@ -180,15 +193,18 @@ body {
                 margin-bottom: 20px;
                 color: $primary-color;
                 font: {
-                    size: 3.25rem;
+                    size: 2.6em;
                     weight: $bold;
                 };
-                line-height: 1.2211538461538461538461538461538;;
+                line-height: 1.2211538461538461538461538461538;
+                @media screen and (width <= 990px) {
+                    font-size: 2em;
+                }
             }
 
             & .card-text {
                 font: {
-                    size: 1.125rem;
+                    size: 0.9em;
                     weight: $medium;
                 };
                 line-height: 2.1666666666666666666666666666667;
@@ -197,8 +213,32 @@ body {
             
     }
 
+    // Адаптив для card
+    @media screen and (width <= 990px) {&-body {font-size: 19px; padding: 30px;}}
+
+    @media screen and (width <= 865px) {
+        &_article {top: 5.5%; right: 4.3%;}
+        &-body {
+            font-size: 17px;
+            & span.card-title {
+                margin-bottom: 10px;
+            }
+            & span.card-title, & h5.card-title, & .card-text {margin-bottom: 10px;}
+            & .btn-card {padding: 20px 60px;}
+        }
+    }
+    @media screen and (width <= 670px) {
+        &-body {
+            font-size: 14px;
+            padding: {top: 15px; bottom: 15px;};
+        }
+    }
+    @media screen and (width <= 560px) {
+    }
+
 }
 
+// Стили для кнопок
 .btn-card {
     color: $white;
     background-color: $primary-color;
@@ -212,14 +252,11 @@ body {
     padding: 25px 72px;
 
     &:hover,
-    &:active,
     &:focus-visible {
         color: $white;
         background-color: $O3344F;
     }
 }
-
-// Исправить
 
 .advantage {
     background-color: $F2F5FF;
@@ -284,6 +321,9 @@ body {
     @media screen and (width <= 991px) {
         &_row {padding-inline: 100px;}
     }
+    @media screen and (width <= 560px) {
+        &_row {padding-inline: 29px;}
+    }
 }
 
 .collection {
@@ -314,10 +354,6 @@ body {
         margin-bottom: 60px; 
         column-gap: 40px; 
         row-gap: 30px;
-        
-        @media screen and (width <= 749px) {
-            margin-bottom: 30px;
-        }
     }
 
     &_img {
@@ -329,7 +365,18 @@ body {
             }
         }
     }
+
+    @media screen and (width <= 749px) {
+        &_image_container {
+            margin-bottom: 30px;
+            & .collection_img {
+                height: 300px;
+            }
+        }
+    }
 }
+
+// learn
 
 .learn {
     margin-bottom: 60px;
@@ -343,6 +390,7 @@ body {
     };
     column-gap: 75px;
     row-gap: 23px;
+    &-container {display: inline-block;}
     &-title {
         font: {
             size: 2rem;
@@ -361,6 +409,8 @@ body {
         margin-bottom: 30px;
     }
 
+    // Адаптив блока learn
+
     @media screen and (width <= 1167px) {
         padding: {
             inline: 100px;
@@ -377,7 +427,20 @@ body {
             height: 490px;
         }
     }
+
+    @include normalize.mobileL {
+        &-container {
+            display: none;
+        }
+    }
+
+    @include normalize.mobileM {
+        padding: 30px;
+        row-gap: 10px;
+    }
 }
+
+// range
 
 .range {
     margin-bottom: 60px;
@@ -407,9 +470,23 @@ body {
                 weight: $semi-bold;
             };
             line-height: 1.2083333333333333333333333333333;
+            @media screen and (width <= 486px) {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    @include normalize.tablet() {
+        &_figures {
+            flex-wrap: wrap;
+            & .figure-img {
+                height: 280px;
+            }
         }
     }
 }
+
+// work
 
 .work {
     margin-bottom: 197px;
@@ -432,6 +509,17 @@ body {
 
         &_container {
             height: $work-height;
+            @include normalize.work-number(1399px) {
+                $work-height: $work-height - 15px;
+                height: $work-height;
+            }
+
+            @include normalize.work-number(1199px) {
+                $work-height: $work-height - 15px - 63px;
+                height: $work-height;
+            }
+
+            // Описание нумерования блоков через псевдоселектор
 
             &::after {
                 @extend %work-after;
@@ -441,6 +529,8 @@ body {
                 &::after {
                     content: '1.';
                     bottom: 123px; left: 16.2%;
+                    @include normalize.work-number(1399px) {bottom: 125px; left: 12.2%}
+                    @include normalize.work-number(1199px) {left: 11.2%}
                 }
             }
 
@@ -448,6 +538,8 @@ body {
                 &::after {
                     content: '2.';
                     bottom: 123px; left: 46.6%;
+                    @include normalize.work-number(1399px) {bottom: 125px; left: 45.6%}
+                    @include normalize.work-number(1199px) {left: 45.6%}
                 }
             }
 
@@ -455,6 +547,8 @@ body {
                 &::after {
                     content: '3.';
                     bottom: 123px; left: 77%;
+                    @include normalize.work-number(1399px) {bottom: 125px; left: 80%}
+                    @include normalize.work-number(1199px) {left: 79%}
                 }
             }
         }
@@ -478,18 +572,63 @@ body {
             }; 
             line-height: 1.5;
         }
+
+    }
+
+    // Адаптив данных нумеровок
+
+    @include normalize.work-number(991px) {
+       &_description {
+            margin-bottom: 25px;
+       }
+       &_figures {
+            flex-wrap: wrap;
+            &_container {
+                $work-height: 410px;
+                height: $work-height;
+
+                &::after {left: 43%;}
+                &_first {
+                    &::after {top: 21.4%;}
+                }
+                &_middle {
+                    &::after {bottom: 39.3%;}
+                }
+                &_last {
+                    &::after {bottom: 5.5%;}
+                }
+            } 
+       }
+    }
+    @include normalize.work-number(767px) {
+        margin-bottom: 80px;
+        &_figures {&_container {&::after {left: 41%;}}}
+    }
+    @include normalize.work-number(576px) {
+        &_figures {
+            margin: 0 auto;
+            width: 300px;
+            &_container {
+                $work-height: 335px;
+                height: $work-height;
+                &::after {left: 34%;}
+                &_first {
+                    &::after {top: 19%;}
+                }
+                &_middle {
+                    &::after {bottom: 40.5%;}
+                }
+                &_last {
+                    &::after {bottom: 6.6%;}
+                }
+            }
+        }
     }
 }
 
 // footer
 
 .footer {
-    padding: {
-        // top: 0;
-        // right: 0;
-        // bottom: 0;
-        // left: 0;
-    };
     &_submit_form {
         background-color: $F2F5FF;
         padding: 60px 0;
@@ -542,16 +681,30 @@ body {
                 bottom: 26px;
                 left: 44px;
             };
+            @include normalize.footers(490px) {
+                align-self: center;
+            }
         }
+
+    @include normalize.footers(490px) {
+        &_input {
+            align-self: center;
+            max-width: 400px;
+            padding-inline: 5px;
+            margin-bottom: 15px;
+        }
+        &_container {
+            flex-direction: column;
+        }
+    }
+    
     }
 
     &_network {
         padding: {
             top: 49px;
             inline: 120px;
-            // right: 120px;
             bottom: 89px;
-            // left: 120px;
         };
         color: $white;
         background-color: $O3344F;
@@ -581,16 +734,27 @@ body {
             margin-bottom: 21px;
         }
 
-        // &_follow {
-        //     &::before {}
-        //     &::hover {
+        &_follow {
+            position: relative;
+        }
 
-        //     }
-        // }
+        @media screen and (width <= 1024px) {
+            padding: {
+                inline: 90px;
+                bottom: 49px;
+            };
+        }
+
+        @media screen and (width <= 586px) {
+            padding: {
+                inline: 40px;
+                bottom: 49px;
+            };
+        }
+        
 
     }
     &_img {
         border-radius: 2px;
     }
 }
-

@@ -18,3 +18,5 @@
 npm run build
 npm run serve
 ```
+<!-- дописать -->
+Ссылка на макет: [макет](https://www.figma.com/design/Fy43OVGQPWHunavHt3ekBL/Furniture-Website-(Community)?node-id=16-65&t=8ugTAhargkVr74nZ-1)

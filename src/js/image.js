@@ -1,5 +1,5 @@
 import bed from '../assets/bed.svg';
-import bedroom from '../assets/Bedroom.svg';
+import bedroom from '../assets/Bedroom.png';
 import blackman from '../assets/BlackMan.png';
 import clock from '../assets/Clock.svg';
 import delivery from '../assets/Delivery.svg';
