@@ -10,6 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         clean: true,
         assetModuleFilename: '[name][ext]',
+        publicPath: './',
     },
     plugins: [
         new HtmlWebpackPlugin({
