@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Верстка сайта на основе макета, взятого из открытых источников.",
   "main": "furniture.js",
+  "homepage": "https://Niko142.github.io/Furniture-project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Niko142/Furniture-project.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
