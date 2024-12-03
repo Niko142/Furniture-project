@@ -5,6 +5,8 @@ import './js/image.js';
 const card = document.querySelector('.card_article');
 const navbarLogo = document.querySelector('.navbar-brand');
 const cardImage = document.querySelector('.card_img');
+const rangeImages = document.querySelectorAll('.range_images');
+const workImages = document.querySelectorAll('.work_images')
 
 function deleteCardImage() {
     if (document.documentElement.clientWidth <= 560) {
@@ -15,7 +17,6 @@ function deleteCardImage() {
         cardImage.style.display = 'block'
         card.style.position = 'absolute';
     }
-
 }
 
 function cardMotion() {
@@ -31,12 +32,32 @@ function cardMotion() {
     }
 }
 
+function ViewBlock() {
+    const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.replace('unvisible', 'visible');
+                observer.unobserve(entry.target)
+            }
+        })
+    };
+    const options = {
+        rootMargin: '0px', //сдвиг области просмотра - viewport
+        threshold: 0.4 //процент пересечения
+    };
+    const imageObserver = new IntersectionObserver(callback, options);
+
+    rangeImages.forEach(item => imageObserver.observe(item));
+    workImages.forEach(item => imageObserver.observe(item))
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Ряд вызванных событий
-    window.addEventListener('resize', deleteCardImage);
-    window.addEventListener('resize', cardMotion);
     cardMotion();
     deleteCardImage();
+    window.addEventListener('resize', deleteCardImage);
+    window.addEventListener('resize', cardMotion);
     navbarLogo.addEventListener('click', function() {window.location.reload()});
+    ViewBlock()
 })
 

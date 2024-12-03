@@ -10,13 +10,12 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         clean: true,
         assetModuleFilename: '[name][ext]',
-        publicPath: './',
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Furniture Project',
             template: './src/furniture.html',
-            hash: true,
+            hash: false,
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',

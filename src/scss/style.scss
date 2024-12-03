@@ -486,6 +486,14 @@ body {
     }
 }
 
+//intesection for work-block and range-block
+.visible{animation: viewblock 1s ease-in-out forwards}
+.unvisible{ opacity: 0;}
+    @keyframes viewblock {
+        from {opacity: 0; transform: translateX(-10%)}
+        to {opacity: 1; transform: translateX(0);}
+    }
+
 // work
 
 .work {
@@ -506,7 +514,6 @@ body {
     }
     &_figures {
         position: relative;
-
         &_container {
             height: $work-height;
             @include normalize.work-number(1399px) {
