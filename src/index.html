@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture-Project</title>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg">
+      <nav class="container-fluid ps-0 pe-0">
+        <span class="navbar-brand p-0">Furniture</span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="card position-relative border-0">
+      <img src="./images/Palm.png" class="card_img img-fluid" alt="Palm" />
+      <article class="card-container position-absolute object-fit-cover">
+        <div class="card-body">
+          <div class="card-content d-flex flex-column">
+            <span class="card-badge d-inline-block mb-0">New Arrival</span>
+            <h1 class="card-title mb-0">Discover Our New Collection</h1>
+            <p class="card-text mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis.
+            </p>
+          </div>
+          <button class="btn btn-buy border-0 text-uppercase">Buy now</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="advantages container-fluid">
+      <div
+        class="advantages-wrapper d-flex flex-wrap justify-content-around"
+      ></div>
+    </section>
+
+    <section class="collection">
+      <div class="collection__header d-flex flex-column text-center">
+        <h2 class="collection__title mb-0">Inspiration Collection</h2>
+        <p class="collection__description mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="collection__gallery d-flex justify-content-center flex-wrap">
+        <img
+          src="./images/Clock.svg"
+          class="collection__img img-fluid"
+          alt="Clock"
+        />
+        <img
+          src="./images/Pedestal.png"
+          class="collection__img collection__img img--raised img-fluid"
+          alt="Pedestal"
+        />
+        <img
+          src="./images/Lamp.png"
+          class="collection__img img-fluid"
+          alt="Lamp"
+        />
+      </div>
+    </section>
+
+    <section
+      class="learn position-relative d-flex justify-content-center align-items-center"
+    >
+      <div class="learn-body d-flex flex-column">
+        <h2 class="learn-title">Beautify Your Space</h2>
+        <div class="learn-text">
+          Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </div>
+        <button
+          class="btn btn-details border-0 align-self-baseline text-uppercase"
+        >
+          Learn more
+        </button>
+      </div>
+      <div class="position-relative d-inline-block">
+        <img
+          src="./images/Girl.svg"
+          class="learn-container_img img-fluid"
+          alt="Girl"
+        />
+      </div>
+    </section>
+
+    <section class="range container">
+      <div class="range__header d-flex flex-column text-center">
+        <h2 class="range__title mb-0">Browse The Range</h2>
+        <p class="range__description mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="row">
+        <figure class="range_figures figure d-flex justify-content-center mb-0">
+          <div
+            class="range_images invisible"
+            aria-label="Появляются, когда пересекут половину области видимости"
+          >
+            <img
+              src="./images/Dining.svg"
+              class="figure-img img-fluid rounded mb-0"
+              alt="..."
+            />
+            <figcaption class="range_caption figure-caption text-center">
+              Dining
+            </figcaption>
+          </div>
+          <div class="range_images invisible">
+            <img
+              src="./images/Living.png"
+              class="figure-img img-fluid rounded mb-0"
+              alt="..."
+            />
+            <figcaption class="range_caption figure-caption text-center">
+              Living
+            </figcaption>
+          </div>
+          <div class="range_images invisible">
+            <img
+              src="./images/Bedroom.png"
+              class="figure-img not img-fluid rounded mb-0"
+              alt="..."
+            />
+            <figcaption class="range_caption figure-caption text-center">
+              Bedroom
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="m-0" />
+
+    <section class="work container">
+      <div class="work__header d-flex flex-column text-center">
+        <h2 class="work__title mb-0">How It Works</h2>
+        <p class="work__description mb-0">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="row">
+        <figure
+          class="work_figures figure position-relative d-flex justify-content-center mb-0 px-0"
+          style="gap: 20px"
+        >
+          <div class="work_images invisible">
+            <div class="work_figures_container work_figures_container_first">
+              <img
+                src="./images/BlackMan.png"
+                class="figure-img img-fluid rounded mb-0"
+                alt="..."
+              />
+            </div>
+            <figcaption class="work_caption figure-caption text-center">
+              Purchase Securely <br />
+              <span class="work_span"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
+              >
+            </figcaption>
+          </div>
+          <div class="work_images invisible">
+            <div class="work_figures_container work_figures_container_middle">
+              <img
+                src="./images/Warehouse.png"
+                class="figure-img img-fluid rounded mb-0"
+                alt="..."
+              />
+            </div>
+            <figcaption class="work_caption figure-caption text-center">
+              Ships From Warehouse <br />
+              <span class="work_span"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
+              >
+            </figcaption>
+          </div>
+          <div class="work_images invisible">
+            <div class="work_figures_container work_figures_container_last">
+              <img
+                src="./images/Room.png"
+                class="figure-img img-fluid rounded mb-0"
+                alt="..."
+              />
+            </div>
+            <figcaption class="work_caption figure-caption text-center">
+              Style Your Room <br />
+              <span class="work_span"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
+              >
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer_submit_form border border-black">
+        <h2 class="footer_submit_form_header text-center">
+          Join Our Mailing List
+        </h2>
+        <p class="footer_submit_form_text text-center">
+          Sign up to receive inspiration, product updates, and special offers
+          from our team.
+        </p>
+        <div class="footer_submit_form_container d-flex justify-content-center">
+          <input
+            type="text"
+            name="email"
+            autocomplete="false"
+            class="footer_submit_form_input form-control"
+            placeholder="example@gmail.com"
+          /><button type="submit" class="btn btn-card btn-footer">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="footer_network">
+        <div class="footer_network_description d-inline-block">
+          <h3 class="footer_network_header">Beauty Care</h3>
+          <p class="footer_network_text">
+            Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+          <a
+            href="http://instagram.com/"
+            class="footer_network_follow"
+            aria-label="Follow on social network"
+            style="
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 1.2083;
+              text-decoration: none;
+              color: var(--white);
+            "
+            >Follow us</a
+          >
+          <i class="fa-brands fa-instagram fa-beat" style="color: #b197fc"></i>
+        </div>
+        <div class="d-inline-block position-relative">
+          <h3 class="footer_network_header shop">Instagram Shop</h3>
+          <div
+            class="container-fluid d-flex p-0"
+            style="gap: 23px; flex-wrap: wrap"
+          >
+            <img
+              src="./images/toy.svg"
+              class="img-fluid footer_img"
+              alt="..."
+            />
+            <img
+              src="./images/bed.svg"
+              class="img-fluid footer_img"
+              alt="..."
+            />
+            <img
+              src="./images/towel.svg"
+              class="img-fluid footer_img"
+              alt="..."
+            />
+            <img
+              src="./images/kitchen.svg"
+              class="img-fluid footer_img"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
