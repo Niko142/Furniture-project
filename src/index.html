@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+    />
     <title>Furniture-Project</title>
   </head>
   <body>
     <header class="navbar navbar-expand-lg">
       <nav class="container-fluid ps-0 pe-0">
-        <span class="navbar-brand p-0">Furniture</span>
+        <span class="navbar-brand fw-bold p-0">Furniture</span>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,13 +47,19 @@
     </header>
 
     <section class="card position-relative border-0">
-      <img src="./images/Palm.png" class="card_img img-fluid" alt="Palm" />
-      <article class="card-container position-absolute object-fit-cover">
+      <img
+        src="./images/palm.webp"
+        class="card-img img-fluid rounded-0"
+        alt="Palm"
+      />
+      <article class="card-container object-fit-cover">
         <div class="card-body">
           <div class="card-content d-flex flex-column">
-            <span class="card-badge d-inline-block mb-0">New Arrival</span>
+            <span class="card-badge fw-semibold d-inline-block mb-0"
+              >New Arrival</span
+            >
             <h1 class="card-title mb-0">Discover Our New Collection</h1>
-            <p class="card-text mb-0">
+            <p class="card-text fw-medium mb-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis.
             </p>
@@ -74,228 +84,234 @@
       </div>
       <div class="collection__gallery d-flex justify-content-center flex-wrap">
         <img
-          src="./images/Clock.svg"
-          class="collection__img img-fluid"
+          src="./images/clock.webp"
+          class="collection__img img-fluid invisible"
           alt="Clock"
         />
         <img
-          src="./images/Pedestal.png"
+          src="./images/pedestal.webp"
           class="collection__img collection__img img--raised img-fluid"
           alt="Pedestal"
         />
         <img
-          src="./images/Lamp.png"
-          class="collection__img img-fluid"
+          src="./images/lamp.png"
+          class="collection__img img-fluid invisible"
           alt="Lamp"
         />
       </div>
     </section>
 
     <section
-      class="learn position-relative d-flex justify-content-center align-items-center"
+      class="cta d-flex flex-column-reverse flex-md-row justify-content-center align-items-center px-4 px-sm-5"
     >
-      <div class="learn-body d-flex flex-column">
-        <h2 class="learn-title">Beautify Your Space</h2>
-        <div class="learn-text">
+      <article class="cta-content d-flex flex-column">
+        <h2 class="cta-title mb-0">Beautify Your Space</h2>
+        <div class="cta-description">
           Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris.
         </div>
-        <button
+        <a
+          href="#footer"
           class="btn btn-details border-0 align-self-baseline text-uppercase"
         >
           Learn more
-        </button>
-      </div>
-      <div class="position-relative d-inline-block">
-        <img
-          src="./images/Girl.svg"
-          class="learn-container_img img-fluid"
-          alt="Girl"
-        />
-      </div>
+        </a>
+      </article>
+      <figure class="cta-figure p-0 m-0 invisible">
+        <img src="./images/girl.webp" class="cta-img img-fluid" alt="Girl" />
+      </figure>
     </section>
 
     <section class="range container">
-      <div class="range__header d-flex flex-column text-center">
-        <h2 class="range__title mb-0">Browse The Range</h2>
-        <p class="range__description mb-0">
+      <div class="range-header d-flex flex-column text-center">
+        <h2 class="range-title mb-0">Browse The Range</h2>
+        <p class="range-description mb-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
       <div class="row">
-        <figure class="range_figures figure d-flex justify-content-center mb-0">
-          <div
-            class="range_images invisible"
-            aria-label="Появляются, когда пересекут половину области видимости"
+        <figure class="range-gallery d-flex justify-content-center mb-0">
+          <!-- Item 1 -->
+          <article
+            class="gallery-item invisible"
+            aria-label="Появления при пересечении определенного % области"
           >
             <img
-              src="./images/Dining.svg"
+              src="./images/dining.webp"
               class="figure-img img-fluid rounded mb-0"
               alt="..."
             />
-            <figcaption class="range_caption figure-caption text-center">
+            <figcaption class="gallery-caption fw-semibold text-center">
               Dining
             </figcaption>
-          </div>
-          <div class="range_images invisible">
+          </article>
+          <!-- Item 2 -->
+          <article class="gallery-item invisible">
             <img
-              src="./images/Living.png"
+              src="./images/living.webp"
               class="figure-img img-fluid rounded mb-0"
               alt="..."
             />
-            <figcaption class="range_caption figure-caption text-center">
+            <figcaption class="gallery-caption fw-semibold text-center">
               Living
             </figcaption>
-          </div>
-          <div class="range_images invisible">
+          </article>
+          <!-- Item 3 -->
+          <article class="gallery-item invisible">
             <img
-              src="./images/Bedroom.png"
-              class="figure-img not img-fluid rounded mb-0"
+              src="./images/bedroom.webp"
+              class="figure-img img-fluid rounded mb-0"
               alt="..."
             />
-            <figcaption class="range_caption figure-caption text-center">
+            <figcaption class="gallery-caption fw-semibold text-center">
               Bedroom
             </figcaption>
-          </div>
+          </article>
         </figure>
       </div>
     </section>
 
     <hr class="m-0" />
 
-    <section class="work container">
-      <div class="work__header d-flex flex-column text-center">
-        <h2 class="work__title mb-0">How It Works</h2>
-        <p class="work__description mb-0">
+    <section class="process container px-md-0 px-5">
+      <div class="process__header d-flex flex-column text-center">
+        <h2 class="process__title mb-0">How It Works</h2>
+        <p class="process__description mb-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
       <div class="row">
         <figure
-          class="work_figures figure position-relative d-flex justify-content-center mb-0 px-0"
-          style="gap: 20px"
+          class="process__steps position-relative d-flex flex-wrap flex-lg-nowrap justify-content-center mb-0 px-0"
         >
-          <div class="work_images invisible">
-            <div class="work_figures_container work_figures_container_first">
+          <!-- Step 1 -->
+          <article class="process__step process__step--purchase invisible">
+            <div class="step__image-wrapper" data-step="1.">
               <img
-                src="./images/BlackMan.png"
+                src="./images/blackMan.webp"
                 class="figure-img img-fluid rounded mb-0"
-                alt="..."
+                alt="black_man"
               />
             </div>
-            <figcaption class="work_caption figure-caption text-center">
-              Purchase Securely <br />
-              <span class="work_span"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
-              >
+            <figcaption class="process__caption text-center">
+              <h3 class="process__caption--title">Purchase Securely</h3>
+              <p class="process__caption--description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </figcaption>
-          </div>
-          <div class="work_images invisible">
-            <div class="work_figures_container work_figures_container_middle">
+          </article>
+
+          <!-- Step 2 -->
+          <article class="process__step process__step--ships invisible">
+            <div class="step__image-wrapper" data-step="2.">
               <img
-                src="./images/Warehouse.png"
+                src="./images/warehouse.webp"
                 class="figure-img img-fluid rounded mb-0"
-                alt="..."
+                alt="warehouse"
               />
             </div>
-            <figcaption class="work_caption figure-caption text-center">
-              Ships From Warehouse <br />
-              <span class="work_span"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
-              >
+            <figcaption class="process__caption text-center">
+              <h3 class="process__caption--title">Ships From Warehouse</h3>
+              <p class="process__caption--description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </figcaption>
-          </div>
-          <div class="work_images invisible">
-            <div class="work_figures_container work_figures_container_last">
+          </article>
+
+          <!-- Step 3 -->
+          <article class="process__step process__step--style invisible">
+            <div class="step__image-wrapper" data-step="3.">
               <img
-                src="./images/Room.png"
+                src="./images/room.webp"
                 class="figure-img img-fluid rounded mb-0"
-                alt="..."
+                alt="room"
               />
             </div>
-            <figcaption class="work_caption figure-caption text-center">
-              Style Your Room <br />
-              <span class="work_span"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
-              >
+            <figcaption class="process__caption text-center">
+              <h3 class="process__caption--title">Style Your Room</h3>
+              <p class="process__caption--description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </figcaption>
-          </div>
+          </article>
         </figure>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="footer_submit_form border border-black">
-        <h2 class="footer_submit_form_header text-center">
-          Join Our Mailing List
-        </h2>
-        <p class="footer_submit_form_text text-center">
-          Sign up to receive inspiration, product updates, and special offers
-          from our team.
-        </p>
-        <div class="footer_submit_form_container d-flex justify-content-center">
+      <section
+        id="footer"
+        class="footer__newsletter border border-black px-3 px-sm-4"
+      >
+        <div class="newsletter__header text-center">
+          <h2 class="newsletter__header--title">Join Our Mailing List</h2>
+          <p class="newsletter__header--description mx-auto mb-0">
+            Sign up to receive inspiration, product updates, and special offers
+            from our team.
+          </p>
+        </div>
+        <form
+          class="footer__form d-flex flex-column flex-sm-row justify-content-center"
+        >
           <input
-            type="text"
+            type="email"
             name="email"
             autocomplete="false"
-            class="footer_submit_form_input form-control"
+            class="footer__form--input form-control"
             placeholder="example@gmail.com"
-          /><button type="submit" class="btn btn-card btn-footer">
-            Submit
-          </button>
-        </div>
-      </div>
-      <div class="footer_network">
-        <div class="footer_network_description d-inline-block">
-          <h3 class="footer_network_header">Beauty Care</h3>
-          <p class="footer_network_text">
+          /><button type="submit" class="btn btn-submit">Submit</button>
+        </form>
+      </section>
+
+      <section class="footer__content d-grid">
+        <section class="footer__about">
+          <h3 class="footer__title">Beauty Care</h3>
+          <p class="footer__description">
             Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
             enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
           <a
             href="http://instagram.com/"
-            class="footer_network_follow"
+            class="footer__social-link"
             aria-label="Follow on social network"
-            style="
-              font-weight: 700;
-              font-size: 24px;
-              line-height: 1.2083;
-              text-decoration: none;
-              color: var(--white);
-            "
             >Follow us</a
           >
-          <i class="fa-brands fa-instagram fa-beat" style="color: #b197fc"></i>
-        </div>
-        <div class="d-inline-block position-relative">
-          <h3 class="footer_network_header shop">Instagram Shop</h3>
-          <div
-            class="container-fluid d-flex p-0"
-            style="gap: 23px; flex-wrap: wrap"
-          >
-            <img
-              src="./images/toy.svg"
-              class="img-fluid footer_img"
-              alt="..."
-            />
-            <img
-              src="./images/bed.svg"
-              class="img-fluid footer_img"
-              alt="..."
-            />
-            <img
-              src="./images/towel.svg"
-              class="img-fluid footer_img"
-              alt="..."
-            />
-            <img
-              src="./images/kitchen.svg"
-              class="img-fluid footer_img"
-              alt="..."
-            />
-          </div>
-        </div>
-      </div>
+        </section>
+        <section class="footer__gallery position-relative">
+          <h3 class="footer__title footer__title--gallery">Instagram Shop</h3>
+
+          <ul class="gallery-list d-flex flex-wrap p-0 m-0">
+            <li class="gallery-list__item invisible">
+              <img
+                src="./images/toy.png"
+                class="img-fluid gallery-list__img"
+                alt="toy"
+              />
+            </li>
+            <li class="gallery-list__item invisible">
+              <img
+                src="./images/bed.png"
+                class="img-fluid gallery-list__img"
+                alt="bed"
+              />
+            </li>
+            <li class="gallery-list__item invisible">
+              <img
+                src="./images/towel.png"
+                class="img-fluid gallery-list__img"
+                alt="towel"
+              />
+            </li>
+            <li class="gallery-list__item invisible">
+              <img
+                src="./images/kitchen.png"
+                class="img-fluid gallery-list__img"
+                alt="kitchen"
+              />
+            </li>
+          </ul>
+        </section>
+      </section>
     </footer>
   </body>
 </html>

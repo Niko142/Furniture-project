@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { advantagesItems } = require("./src/data/data");
+const { type } = require("os");
 
 module.exports = {
   mode: "development",
@@ -70,8 +71,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|svg|gif|webp)$/i,
+        test: /\.(png|jpe?g|gif|webp)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "images/[name][ext]",
+        },
+      },
+      {
+        test: /\.svg/i,
+        type: "asset/inline",
         generator: {
           filename: "images/[name][ext]",
         },

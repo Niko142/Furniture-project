@@ -10,6 +10,12 @@
   }
 }
 
+@mixin collection-custom {
+  @media (max-width: 1144px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (max-width: 1200px) {
     @content;
