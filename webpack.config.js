@@ -1,10 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const autoprefixer = require("autoprefixer");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { advantagesItems } = require("./src/data/data");
-const { type } = require("os");
+const ESLintPlugin = require("eslint-webpack-plugin");
+const autoprefixer = require("autoprefixer");
+const { advantagesItems } = require("./src/data/advantages-data");
 
 module.exports = {
   mode: "development",
@@ -21,6 +21,9 @@ module.exports = {
     hot: true,
   },
   plugins: [
+    new ESLintPlugin({
+      files: "src/**/*.js",
+    }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       templateParameters: {
