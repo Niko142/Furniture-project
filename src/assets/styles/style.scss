@@ -3,8 +3,8 @@
 @use "mixins";
 
 // Основные цвета
-$white: #ffffff;
-$black: #000000;
+$color-white: #ffffff;
+$color-black: #000000;
 $off-white: #fcfcfc;
 $pale-white: #f2f5ff;
 $navy: #011c42;
@@ -17,25 +17,15 @@ $light-grey: #666666;
 
 $collection-margin: 88px;
 
-// font
+// Шрифты
 $font-family: "Montserrat";
 
 // Подключение шрифтов
 @font-face {
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font: {
     family: $font-family;
-    weight: 700;
-    style: normal;
-    display: swap;
-  }
-}
-
-@font-face {
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
-  font: {
-    family: $font-family;
-    weight: 600;
+    weight: 400;
     style: normal;
     display: swap;
   }
@@ -52,10 +42,20 @@ $font-family: "Montserrat";
 }
 
 @font-face {
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font: {
     family: $font-family;
-    weight: 400;
+    weight: 600;
+    style: normal;
+    display: swap;
+  }
+}
+
+@font-face {
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font: {
+    family: $font-family;
+    weight: 700;
     style: normal;
     display: swap;
   }
@@ -71,18 +71,17 @@ body {
   margin-inline: auto;
 }
 
-// extend-компоненты
+// extend-элементы
 %btn {
-  box-sizing: border-box;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.25;
-  color: $white;
+  color: $color-white;
   background-color: $primary;
 
   &:hover,
   &:focus-visible {
-    color: $white;
+    color: $color-white;
     background-color: $dark-blue;
   }
 }
@@ -104,19 +103,8 @@ body {
   }
 }
 
-.is-invalid {
-  border-color: red;
-}
-
-// Анимация появления для observer
-.visible {
-  animation: viewblock 1s ease-in-out forwards;
-}
-.invisible {
-  opacity: 0;
-}
-
-@keyframes viewblock {
+// Анимация появления элементов
+@keyframes fade-in {
   from {
     opacity: 0;
     transform: translateX(-10%);
@@ -127,10 +115,18 @@ body {
   }
 }
 
+// Анимация появления для observer
+.visible {
+  animation: fade-in 1s ease-in-out forwards;
+}
+.invisible {
+  opacity: 0;
+}
+
 // Основные стили для header
 .navbar {
   padding: 43px 120px 38px;
-  background-color: $white;
+  background-color: $color-white;
 
   @include mixins.tablet {
     padding-inline: 60px;
@@ -510,21 +506,20 @@ body {
         &::after {
           content: attr(data-step);
           position: absolute;
-          box-sizing: border-box;
-          bottom: -45px;
           left: 50%;
+          bottom: -45px;
           transform: translateX(-50%);
           display: flex;
           justify-content: center;
           width: 90px;
           height: 90px;
-          border-radius: 50%;
           font-size: 1.5rem;
           font-weight: bold;
           line-height: 2.5;
-          color: $white;
-          background-color: $black;
+          color: $color-white;
+          background-color: $color-black;
           border: 15px solid $off-white;
+          border-radius: 50%;
           z-index: 2;
         }
       }
@@ -598,6 +593,13 @@ body {
       font-size: 1rem;
       line-height: 1.25;
       border-radius: 3px 0 0 3px;
+
+      &.invalid {
+        border-color: red !important;
+        &:focus {
+          box-shadow: 0 0 0 0.25rem rgba(253, 41, 13, 0.25);
+        }
+      }
     }
     @include mixins.mobile {
       row-gap: 20px;
@@ -625,7 +627,7 @@ body {
     grid-template-columns: 400px 1fr;
     padding: 49px 120px 89px;
     gap: 50px 23px;
-    color: $white;
+    color: $color-white;
     background-color: $dark-blue;
 
     @include mixins.desktop {
